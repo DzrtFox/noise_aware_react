@@ -6,7 +6,10 @@ const apiUrl = "https://gateway.marvel.com:443/v1/public/characters";
 
 const DataService = {
     async getCharacters() {
-        let data = await this.sendRequest();
+        let data = await this.sendRequest({
+            limit: 1
+        });
+
         let characterCount = 0;
 
         if (data && data.data && data.data.data && data.data.data.total) {

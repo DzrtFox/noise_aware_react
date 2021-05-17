@@ -48,7 +48,7 @@ class CharacterStore extends Reflux.Store {
 
         const imagePath = character.thumbnail.path;
         const extension = character.thumbnail.extension;
-        const fullImagePath = imagePath + "/landscape_amazing." + extension;
+        const fullImagePath = imagePath + "/landscape_large." + extension;
         
         character.imagePath = fullImagePath;
     }
